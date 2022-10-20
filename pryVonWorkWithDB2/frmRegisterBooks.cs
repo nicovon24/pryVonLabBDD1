@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Configuration;
+using System.Runtime.InteropServices;
 
 namespace pryVonWorkWithDB2
 {
@@ -21,61 +23,47 @@ namespace pryVonWorkWithDB2
 
         private void frmRegisterBooks_Load(object sender, EventArgs e)
         {
-
-
+            DateTimePicker varDate = dtpFecha;
+            varDate.Format = DateTimePickerFormat.Custom;
+            varDate.CustomFormat = "d/M/yyyy";
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
             try
             {
-                int varNumLibro = Convert.ToInt32(nudNumLibro.Text);
-
                 OleDbConnection dbConnection = new OleDbConnection(frmMain.accessURL + "BIBLIOTECA.accdb");
                 dbConnection.Open();
 
-                OleDbCommand bringFromDB = new OleDbCommand();
-
-                bringFromDB.Connection = dbConnection; //connecting .net with the DB
-                bringFromDB.CommandType = CommandType.TableDirect; //getting the data from a table
-                bringFromDB.CommandText = "LIBROS"; ///name of the table
-
-                OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
-
-                bool flag = false;
-
-                while (lectorDeConsulta.Read())
-                {
-                    if (Convert.ToInt32(lectorDeConsulta[3].ToString()) == varNumLibro)
-                    {
-                        flag = true;
-                    }
-                }
+                string varAutor = txtAutor.Text, varTitulo = txtTitulo.Text;
 
                 //we execute this code if the numLibro is not in the access file
-                if (flag == false)
-                {
-                    OleDbCommand ComandoDb = new OleDbCommand();
-                    ComandoDb.Connection = dbConnection;
-                    ComandoDb.CommandType = CommandType.Text;
-                    ComandoDb.CommandText = "INSERT INTO " +
-                    "LIBROS (Título, Autor, Fecha Editado, Nº Libro) " +
-                    "VALUES(' " + txtAutor + " ', ' " + txtTitulo + " ' , ' " + dtpFecha.Text + " ' ," + 
-                    nudNumLibro.Text + ")";
-
-                    MessageBox.Show("Dato cargado");
-                }
-                else
-                {
-                    MessageBox.Show("ID repetido");
-                }
-                lectorDeConsulta.Close();
+                OleDbCommand comando = new OleDbCommand();
+                comando.Connection = dbConnection;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "INSERT INTO LIBROS (Título, Autor, [Fecha Editado])" +
+                " VALUES('" + varTitulo + "','" + varAutor + "','" + dtpFecha.Text + "')";
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Dato cargado");
                 dbConnection.Close();
+                
             }
-            catch (Exception)
+            catch
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

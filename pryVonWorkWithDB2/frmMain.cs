@@ -76,13 +76,6 @@ namespace pryVonWorkWithDB2
             frmQueryLends.Show();
         }
 
-        private void queryPartnershipsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmQueryPartnerships frmQueryPartnerships = new frmQueryPartnerships();
-            frmQueryPartnerships.Show();
-        }
-
         private void frmMain_Load(object sender, EventArgs e)
         {
              
@@ -98,6 +91,13 @@ namespace pryVonWorkWithDB2
         private void menuMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void registerLendsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            pryRegisterLends frmRegisterLends = new pryRegisterLends();
+            frmRegisterLends.Show();
         }
     }
 }
