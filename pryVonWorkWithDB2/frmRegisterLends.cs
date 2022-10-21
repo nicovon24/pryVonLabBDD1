@@ -35,24 +35,33 @@ namespace pryVonWorkWithDB2
         }
 
 
-        //NO FUNCIONAAAAAAAAAAAAAAAAAAAAAA, esta igual a btnCargar de registerBooks :(
         private void btnCargar_Click(object sender, EventArgs e)
         {
             try
             {
-                OleDbConnection dbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BIBLIOTECA.accdb");
-                dbConnection.Open();
-                DateTimePicker dateRetiro = dtpFechaRetiro;
+                if(nudNumLibro.Text!="0" && nudNumSocio.Text != "0")
+                {
+                    OleDbConnection dbConnection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BIBLIOTECA.accdb");
+                    dbConnection.Open();
+                    DateTimePicker dateRetiro = dtpFechaRetiro;
 
-                //we execute this code if the numLibro is not in the access file
-                OleDbCommand comando = new OleDbCommand();
-                comando.Connection = dbConnection;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = "INSERT INTO PRÉSTAMOS ([Fecha Retiro], [Fecha Entrega], [Nº Socio], [Nº Libro])" +
-                " VALUES('" + dateRetiro.Text + "','" + dtpFechaEntrega.Text + "','" + nudNumSocio.Text + "','" + nudNumLibro.Text + "')";
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Dato cargado");
-                dbConnection.Close();
+                    //we execute this code if the numLibro is not in the access file
+                    OleDbCommand comando = new OleDbCommand();
+                    comando.Connection = dbConnection;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = "INSERT INTO PRÉSTAMOS ([Fecha Retiro], [Fecha Entrega], [Nº Socio], [Nº Libro])" +
+                    " VALUES('" + dateRetiro.Text + "','" + dtpFechaEntrega.Text + "','" + nudNumSocio.Text + "','" + nudNumLibro.Text + "')";
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Dato cargado");
+                    dbConnection.Close();
+
+                    nudNumLibro.Value = 0;
+                    nudNumSocio.Value = 0;
+                }
+                else
+                {
+                    MessageBox.Show("Datos incompletos, idiota");
+                }
             }
             catch
             {
@@ -61,6 +70,13 @@ namespace pryVonWorkWithDB2
         }
 
         private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             frmMain frmMain = new frmMain();

@@ -32,21 +32,30 @@ namespace pryVonWorkWithDB2
         {
             try
             {
-                OleDbConnection dbConnection = new OleDbConnection(frmMain.accessURL + "BIBLIOTECA.accdb");
-                dbConnection.Open();
+                if(txtAutor.Text!="" && txtTitulo.Text!="" && dtpFecha.Text != "")
+                {
+                    OleDbConnection dbConnection = new OleDbConnection(frmMain.accessURL + "BIBLIOTECA.accdb");
+                    dbConnection.Open();
 
-                string varAutor = txtAutor.Text, varTitulo = txtTitulo.Text;
+                    string varAutor = txtAutor.Text, varTitulo = txtTitulo.Text;
 
-                //we execute this code if the numLibro is not in the access file
-                OleDbCommand comando = new OleDbCommand();
-                comando.Connection = dbConnection;
-                comando.CommandType = CommandType.Text;
-                comando.CommandText = "INSERT INTO LIBROS (Título, Autor, [Fecha Editado])" +
-                " VALUES('" + varTitulo + "','" + varAutor + "','" + dtpFecha.Text + "')";
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Dato cargado");
-                dbConnection.Close();
-                
+                    //we execute this code if the numLibro is not in the access file
+                    OleDbCommand comando = new OleDbCommand();
+                    comando.Connection = dbConnection;
+                    comando.CommandType = CommandType.Text;
+                    comando.CommandText = "INSERT INTO LIBROS (Título, Autor, [Fecha Editado])" +
+                    " VALUES('" + varTitulo + "','" + varAutor + "','" + dtpFecha.Text + "')";
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Dato cargado");
+                    dbConnection.Close();
+
+                    txtAutor.Text = ""; txtTitulo.Text = ""; 
+                }
+                else
+                {
+                    MessageBox.Show("Datos incompletos, idiota");
+                }
+
             }
             catch
             {

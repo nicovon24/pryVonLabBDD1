@@ -51,6 +51,7 @@
             this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnCargar
             // 
@@ -116,7 +117,7 @@
             // 
             this.nudNumLibro.Location = new System.Drawing.Point(123, 214);
             this.nudNumLibro.Maximum = new decimal(new int[] {
-            200000,
+            4,
             0,
             0,
             0});
@@ -129,7 +130,7 @@
             // 
             this.nudNumSocio.Location = new System.Drawing.Point(123, 169);
             this.nudNumSocio.Maximum = new decimal(new int[] {
-            200000,
+            4,
             0,
             0,
             0});
