@@ -99,5 +99,19 @@ namespace pryVonWorkWithDB2
             pryRegisterLends frmRegisterLends = new pryRegisterLends();
             frmRegisterLends.Show();
         }
+
+        private void queryPartnershipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmQueryPartnerships frmNew = new frmQueryPartnerships();
+            frmNew.Show();
+        }
+
+        private void registerPartnershipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegisterPartnerships frmNew = new frmRegisterPartnerships();
+            frmNew.Show();
+        }
     }
 }

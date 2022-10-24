@@ -32,11 +32,12 @@
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerLendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryLendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerLendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queryPartnershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,9 +72,16 @@
             // registerBooksToolStripMenuItem
             // 
             this.registerBooksToolStripMenuItem.Name = "registerBooksToolStripMenuItem";
-            this.registerBooksToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.registerBooksToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.registerBooksToolStripMenuItem.Text = "register books";
             this.registerBooksToolStripMenuItem.Click += new System.EventHandler(this.registerBooksToolStripMenuItem_Click);
+            // 
+            // registerLendsToolStripMenuItem
+            // 
+            this.registerLendsToolStripMenuItem.Name = "registerLendsToolStripMenuItem";
+            this.registerLendsToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.registerLendsToolStripMenuItem.Text = "register lends";
+            this.registerLendsToolStripMenuItem.Click += new System.EventHandler(this.registerLendsToolStripMenuItem_Click);
             // 
             // queryToolStripMenuItem
             // 
@@ -87,7 +95,8 @@
             // 
             this.queryLibraryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.queryBooksToolStripMenuItem,
-            this.queryLendsToolStripMenuItem});
+            this.queryLendsToolStripMenuItem,
+            this.queryPartnershipsToolStripMenuItem});
             this.queryLibraryToolStripMenuItem.Name = "queryLibraryToolStripMenuItem";
             this.queryLibraryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.queryLibraryToolStripMenuItem.Text = "Query library";
@@ -96,23 +105,23 @@
             // queryBooksToolStripMenuItem
             // 
             this.queryBooksToolStripMenuItem.Name = "queryBooksToolStripMenuItem";
-            this.queryBooksToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.queryBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.queryBooksToolStripMenuItem.Text = "query books";
             this.queryBooksToolStripMenuItem.Click += new System.EventHandler(this.queryBooksToolStripMenuItem_Click);
             // 
             // queryLendsToolStripMenuItem
             // 
             this.queryLendsToolStripMenuItem.Name = "queryLendsToolStripMenuItem";
-            this.queryLendsToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.queryLendsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.queryLendsToolStripMenuItem.Text = "query lends";
             this.queryLendsToolStripMenuItem.Click += new System.EventHandler(this.queryLendsToolStripMenuItem_Click);
             // 
-            // registerLendsToolStripMenuItem
+            // queryPartnershipsToolStripMenuItem
             // 
-            this.registerLendsToolStripMenuItem.Name = "registerLendsToolStripMenuItem";
-            this.registerLendsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registerLendsToolStripMenuItem.Text = "register lends";
-            this.registerLendsToolStripMenuItem.Click += new System.EventHandler(this.registerLendsToolStripMenuItem_Click);
+            this.queryPartnershipsToolStripMenuItem.Name = "queryPartnershipsToolStripMenuItem";
+            this.queryPartnershipsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.queryPartnershipsToolStripMenuItem.Text = "query partnerships";
+            this.queryPartnershipsToolStripMenuItem.Click += new System.EventHandler(this.queryPartnershipsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -142,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem registerLibraryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerLendsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem queryPartnershipsToolStripMenuItem;
     }
 }
 
