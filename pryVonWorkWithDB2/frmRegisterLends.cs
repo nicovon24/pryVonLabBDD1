@@ -57,6 +57,9 @@ namespace pryVonWorkWithDB2
 
                     nudNumLibro.Value = 0;
                     nudNumSocio.Value = 0;
+                    dtpFechaEntrega.Text = DateTime.Now.Date.ToString();
+                    dtpFechaRetiro.Text = DateTime.Now.Date.ToString();
+                    dtpFechaEntrega.Focus();
                 }
                 else
                 {

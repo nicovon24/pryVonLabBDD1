@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.grdPartners = new System.Windows.Forms.DataGridView();
-            this.btnBack = new System.Windows.Forms.Button();
             this.colNSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNroLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdPartners)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,15 +51,6 @@
             this.grdPartners.Name = "grdPartners";
             this.grdPartners.Size = new System.Drawing.Size(539, 347);
             this.grdPartners.TabIndex = 4;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(448, 391);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(103, 37);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // colNSocio
             // 
@@ -85,6 +76,16 @@
             // 
             this.colFInscripcion.HeaderText = "Fecha inscripcion";
             this.colFInscripcion.Name = "colFInscripcion";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(448, 391);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(103, 37);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmQueryPartnerships
             // 

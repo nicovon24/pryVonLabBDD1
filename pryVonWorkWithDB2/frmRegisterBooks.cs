@@ -32,7 +32,7 @@ namespace pryVonWorkWithDB2
         {
             try
             {
-                if(txtAutor.Text!="" && txtTitulo.Text!="" && dtpFecha.Text != "")
+                if (txtAutor.Text != "" && txtTitulo.Text != "" && dtpFecha.Text != "")
                 {
                     OleDbConnection dbConnection = new OleDbConnection(frmMain.accessURL + "BIBLIOTECA.accdb");
                     dbConnection.Open();
@@ -48,8 +48,9 @@ namespace pryVonWorkWithDB2
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Dato cargado");
                     dbConnection.Close();
-
-                    txtAutor.Text = ""; txtTitulo.Text = ""; 
+                    txtAutor.Text = ""; txtTitulo.Text = "";
+                    dtpFecha.Text = DateTime.Now.Date.ToString();
+                    txtTitulo.Focus();
                 }
                 else
                 {

@@ -23,5 +23,12 @@ namespace pryVonWorkWithDB2
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+        }
     }
 }
