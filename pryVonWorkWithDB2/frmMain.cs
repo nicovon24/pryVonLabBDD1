@@ -120,5 +120,19 @@ namespace pryVonWorkWithDB2
             frmRegisterPartnerships frmRegisterPartnerships = new frmRegisterPartnerships();
             frmRegisterPartnerships.Show();
         }
+
+        private void removeBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRemoveBooks frmRemoveBooks = new frmRemoveBooks();
+            frmRemoveBooks.Show();
+        }
+
+        private void updateBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUpdateBooks frmUpdateBooks = new frmUpdateBooks();
+            frmUpdateBooks.Show();
+        }
     }
 }

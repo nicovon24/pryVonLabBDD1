@@ -82,6 +82,18 @@
     <Compile Include="frmRegisterPartnerships.Designer.cs">
       <DependentUpon>frmRegisterPartnerships.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRemoveBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemoveBooks.Designer.cs">
+      <DependentUpon>frmRemoveBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateBooks.Designer.cs">
+      <DependentUpon>frmUpdateBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmRegisterLends.cs">
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterPartnerships.resx">
       <DependentUpon>frmRegisterPartnerships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemoveBooks.resx">
+      <DependentUpon>frmRemoveBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateBooks.resx">
+      <DependentUpon>frmUpdateBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

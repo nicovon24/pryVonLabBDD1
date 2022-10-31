@@ -33,12 +33,16 @@
             this.registerLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerLendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerPartnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryLendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryPartnershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerPartnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +50,12 @@
             // 
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
-            this.queryToolStripMenuItem});
+            this.queryToolStripMenuItem,
+            this.removeToolStripMenuItem,
+            this.updateToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(190, 24);
+            this.menuMain.Size = new System.Drawing.Size(367, 24);
             this.menuMain.TabIndex = 0;
             this.menuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuMain_ItemClicked);
             // 
@@ -84,6 +90,13 @@
             this.registerLendsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registerLendsToolStripMenuItem.Text = "register lends";
             this.registerLendsToolStripMenuItem.Click += new System.EventHandler(this.registerLendsToolStripMenuItem_Click);
+            // 
+            // registerPartnersToolStripMenuItem
+            // 
+            this.registerPartnersToolStripMenuItem.Name = "registerPartnersToolStripMenuItem";
+            this.registerPartnersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerPartnersToolStripMenuItem.Text = "register partners";
+            this.registerPartnersToolStripMenuItem.Click += new System.EventHandler(this.registerPartnersToolStripMenuItem_Click);
             // 
             // queryToolStripMenuItem
             // 
@@ -125,18 +138,41 @@
             this.queryPartnershipsToolStripMenuItem.Text = "query partnerships";
             this.queryPartnershipsToolStripMenuItem.Click += new System.EventHandler(this.queryPartnershipsToolStripMenuItem_Click);
             // 
-            // registerPartnersToolStripMenuItem
+            // removeToolStripMenuItem
             // 
-            this.registerPartnersToolStripMenuItem.Name = "registerPartnersToolStripMenuItem";
-            this.registerPartnersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registerPartnersToolStripMenuItem.Text = "register partners";
-            this.registerPartnersToolStripMenuItem.Click += new System.EventHandler(this.registerPartnersToolStripMenuItem_Click);
+            this.removeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeBooksToolStripMenuItem});
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.removeToolStripMenuItem.Text = "Remove";
+            // 
+            // removeBooksToolStripMenuItem
+            // 
+            this.removeBooksToolStripMenuItem.Name = "removeBooksToolStripMenuItem";
+            this.removeBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeBooksToolStripMenuItem.Text = "Remove books";
+            this.removeBooksToolStripMenuItem.Click += new System.EventHandler(this.removeBooksToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateBooksToolStripMenuItem});
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // updateBooksToolStripMenuItem
+            // 
+            this.updateBooksToolStripMenuItem.Name = "updateBooksToolStripMenuItem";
+            this.updateBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateBooksToolStripMenuItem.Text = "update books";
+            this.updateBooksToolStripMenuItem.Click += new System.EventHandler(this.updateBooksToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(190, 71);
+            this.ClientSize = new System.Drawing.Size(367, 71);
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
             this.Name = "frmMain";
@@ -162,6 +198,10 @@
         private System.Windows.Forms.ToolStripMenuItem registerLendsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem queryPartnershipsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerPartnersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeBooksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateBooksToolStripMenuItem;
     }
 }
 

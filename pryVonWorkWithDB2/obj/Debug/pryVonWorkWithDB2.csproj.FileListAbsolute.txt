@@ -90,3 +90,7 @@ C:\Users\Nicolas\Desktop\pryVonLab2BDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWi
 C:\Users\Nicolas\Desktop\pryVonLab2BDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.csproj.CoreCompileInputs.cache
 C:\Users\Nicolas\Desktop\pryVonLab2BDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.exe
 C:\Users\Nicolas\Desktop\pryVonLab2BDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.pdb
+C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmQueryPartnerships.resources
+C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmRegisterPartnerships.resources
+C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmRemoveBooks.resources
+C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmUpdateBooks.resources
