@@ -32,8 +32,8 @@
             this.grdLends = new System.Windows.Forms.DataGridView();
             this.colFechaRetiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNroSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNroLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdLends)).BeginInit();
             this.SuspendLayout();
@@ -54,8 +54,8 @@
             this.grdLends.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFechaRetiro,
             this.colFechaEntrega,
-            this.colNroSocio,
-            this.colNroLibro,
+            this.colSocio,
+            this.colLibro,
             this.colIDPrestamo});
             this.grdLends.Location = new System.Drawing.Point(21, 12);
             this.grdLends.Name = "grdLends";
@@ -73,15 +73,15 @@
             this.colFechaEntrega.HeaderText = "Fecha Entrega";
             this.colFechaEntrega.Name = "colFechaEntrega";
             // 
-            // colNroSocio
+            // colSocio
             // 
-            this.colNroSocio.HeaderText = "Nro Socio";
-            this.colNroSocio.Name = "colNroSocio";
+            this.colSocio.HeaderText = "Socio";
+            this.colSocio.Name = "colSocio";
             // 
-            // colNroLibro
+            // colLibro
             // 
-            this.colNroLibro.HeaderText = "Nro Libro";
-            this.colNroLibro.Name = "colNroLibro";
+            this.colLibro.HeaderText = "Libro";
+            this.colLibro.Name = "colLibro";
             // 
             // colIDPrestamo
             // 
@@ -109,8 +109,8 @@
         private System.Windows.Forms.DataGridView grdLends;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaRetiro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaEntrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNroSocio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNroLibro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSocio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLibro;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDPrestamo;
     }
 }

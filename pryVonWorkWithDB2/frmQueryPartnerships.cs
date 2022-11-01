@@ -30,5 +30,10 @@ namespace pryVonWorkWithDB2
             frmMain frmMain = new frmMain();
             frmMain.Show();
         }
+
+        private void grdPartners_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
