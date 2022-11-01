@@ -54,7 +54,7 @@
             this.lblMSG.Name = "lblMSG";
             this.lblMSG.Size = new System.Drawing.Size(222, 42);
             this.lblMSG.TabIndex = 73;
-            this.lblMSG.Text = "Type the CP or number of the book, example 3, 4, 24, 25, 26 or 27";
+            this.lblMSG.Text = "Type the CP or number of the book, example 1, 2, 4";
             // 
             // btnVolver
             // 

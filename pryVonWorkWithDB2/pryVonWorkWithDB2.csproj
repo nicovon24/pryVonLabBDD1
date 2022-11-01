@@ -70,6 +70,12 @@
     <Compile Include="frmQueryPartnerships.Designer.cs">
       <DependentUpon>frmQueryPartnerships.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQueryTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryTitle.Designer.cs">
+      <DependentUpon>frmQueryTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegisterBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQueryPartnerships.resx">
       <DependentUpon>frmQueryPartnerships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryTitle.resx">
+      <DependentUpon>frmQueryTitle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterBooks.resx">
       <DependentUpon>frmRegisterBooks.cs</DependentUpon>

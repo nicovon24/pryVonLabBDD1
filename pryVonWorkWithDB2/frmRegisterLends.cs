@@ -85,5 +85,10 @@ namespace pryVonWorkWithDB2
             frmMain frmMain = new frmMain();
             frmMain.Show();
         }
+
+        private void dtpFechaRetiro_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

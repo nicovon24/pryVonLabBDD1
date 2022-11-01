@@ -32,6 +32,9 @@ namespace pryVonWorkWithDB2
 
         private void bntEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+
                 int codigoLibro = int.Parse(txtNumber.Text);
                 bool flagNumIsInDB = false;
 
@@ -73,6 +76,11 @@ namespace pryVonWorkWithDB2
                 {
                     MessageBox.Show("La persona no se encuentra en la base de datos");
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el removeo de datos");
+            }
         }
 
         private void txtNumber_TextChanged(object sender, EventArgs e)

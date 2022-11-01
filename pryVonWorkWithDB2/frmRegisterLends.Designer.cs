@@ -85,6 +85,7 @@
             this.dtpFechaRetiro.Name = "dtpFechaRetiro";
             this.dtpFechaRetiro.Size = new System.Drawing.Size(198, 20);
             this.dtpFechaRetiro.TabIndex = 19;
+            this.dtpFechaRetiro.ValueChanged += new System.EventHandler(this.dtpFechaRetiro_ValueChanged);
             // 
             // lblFechaRetiro
             // 

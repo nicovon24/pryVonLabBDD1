@@ -94,3 +94,4 @@ C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWit
 C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmRegisterPartnerships.resources
 C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmRemoveBooks.resources
 C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmUpdateBooks.resources
+C:\Users\Nicolas\Desktop\pryVonLabBDD1\pryVonWorkWithDB2\obj\Debug\pryVonWorkWithDB2.frmQueryTitle.resources

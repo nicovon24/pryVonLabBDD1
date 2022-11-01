@@ -152,5 +152,12 @@ namespace pryVonWorkWithDB2
             this.Hide();
             MessageBox.Show("See you soon!");
         }
+
+        private void booksTitleDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmQueryTitle frmQueryTitle = new frmQueryTitle();
+            frmQueryTitle.Show();
+        }
     }
 }
