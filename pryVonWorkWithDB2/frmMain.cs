@@ -58,81 +58,99 @@ namespace pryVonWorkWithDB2
         {
             InitializeComponent();
         }
-        private void queryBooksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmQueryBooks frmQueryBooks = new frmQueryBooks();
-            frmQueryBooks.Show();
-        }
-
-        private void queryLibraryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void queryLendsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmQueryLends frmQueryLends = new frmQueryLends();
-            frmQueryLends.Show();
-        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
              
         }
 
-        private void registerBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //query
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmQueryBooks frmQueryBooks = new frmQueryBooks();
+            frmQueryBooks.Show();
+        }
+
+        private void lendsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmQueryLends frmQueryLends = new frmQueryLends();
+            frmQueryLends.Show();
+        }
+
+        private void partnersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            frmQueryPartnerships frmNew = new frmQueryPartnerships();
+            frmNew.Show();
+        }
+
+        //register
+        private void booksToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmRegisterBooks frmRegisterBooks = new frmRegisterBooks();
             frmRegisterBooks.Show();
         }
 
-        private void menuMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void lendsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void registerLendsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             this.Hide();
             pryRegisterLends frmRegisterLends = new pryRegisterLends();
             frmRegisterLends.Show();
         }
 
-        private void queryPartnershipsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmQueryPartnerships frmNew = new frmQueryPartnerships();
-            frmNew.Show();
-        }
-
-        private void registerPartnershipsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void partnersToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmRegisterPartnerships frmNew = new frmRegisterPartnerships();
             frmNew.Show();
         }
 
-        private void registerPartnersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void booksToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmRegisterPartnerships frmRegisterPartnerships = new frmRegisterPartnerships();
-            frmRegisterPartnerships.Show();
-        }
 
-        private void removeBooksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             this.Hide();
             frmRemoveBooks frmRemoveBooks = new frmRemoveBooks();
             frmRemoveBooks.Show();
         }
 
-        private void updateBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        private void booksToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmUpdateBooks frmUpdateBooks = new frmUpdateBooks();
             frmUpdateBooks.Show();
+        }
+
+        private void removeBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void updateBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MessageBox.Show("See you soon!");
         }
     }
 }
