@@ -88,5 +88,10 @@ namespace pryVonWorkWithDB2
             this.Hide();
             frmMain.Show();
         }
+
+        private void gbData_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

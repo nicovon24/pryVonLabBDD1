@@ -31,9 +31,9 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.gbData = new System.Windows.Forms.GroupBox();
-            this.lblAuthorRes = new System.Windows.Forms.Label();
             this.lblDateRes = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.lblAuthorRes = new System.Windows.Forms.Label();
             this.cbTitle = new System.Windows.Forms.ComboBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(18, 45);
+            this.lblAuthor.Location = new System.Drawing.Point(6, 47);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(38, 13);
             this.lblAuthor.TabIndex = 1;
@@ -70,15 +70,7 @@
             this.gbData.TabIndex = 2;
             this.gbData.TabStop = false;
             this.gbData.Text = "Data of the book";
-            // 
-            // lblAuthorRes
-            // 
-            this.lblAuthorRes.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAuthorRes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAuthorRes.Location = new System.Drawing.Point(94, 32);
-            this.lblAuthorRes.Name = "lblAuthorRes";
-            this.lblAuthorRes.Size = new System.Drawing.Size(140, 43);
-            this.lblAuthorRes.TabIndex = 4;
+            this.gbData.Enter += new System.EventHandler(this.gbData_Enter);
             // 
             // lblDateRes
             // 
@@ -92,11 +84,20 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(18, 116);
+            this.lblDate.Location = new System.Drawing.Point(6, 117);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(61, 13);
+            this.lblDate.Size = new System.Drawing.Size(76, 13);
             this.lblDate.TabIndex = 5;
-            this.lblDate.Text = "Edited data";
+            this.lblDate.Text = "Date of edition";
+            // 
+            // lblAuthorRes
+            // 
+            this.lblAuthorRes.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblAuthorRes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAuthorRes.Location = new System.Drawing.Point(94, 32);
+            this.lblAuthorRes.Name = "lblAuthorRes";
+            this.lblAuthorRes.Size = new System.Drawing.Size(140, 43);
+            this.lblAuthorRes.TabIndex = 4;
             // 
             // cbTitle
             // 
