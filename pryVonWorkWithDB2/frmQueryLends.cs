@@ -19,7 +19,6 @@ namespace pryVonWorkWithDB2
         public frmQueryLends()
         {
             InitializeComponent();
-            //frmMain.getDataFromDBQuery("BIBLIOTECA.accdb", "PRÉSTAMOS", grdLends);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -53,15 +52,26 @@ namespace pryVonWorkWithDB2
             //we add the 
             while (readerPrestamos.Read())
             {
+                //dates
+                string day1 = Convert.ToDateTime(readerPrestamos[0]).Day.ToString();
+                string month1 = Convert.ToDateTime(readerPrestamos[0]).Month.ToString();
+                string year1 = Convert.ToDateTime(readerPrestamos[0]).Year.ToString();
+                string date1 = day1 + "/" + month1 + "/" + year1;
+
+                string day2 = Convert.ToDateTime(readerPrestamos[0]).Day.ToString();
+                string month2 = Convert.ToDateTime(readerPrestamos[0]).Month.ToString();
+                string year2 = Convert.ToDateTime(readerPrestamos[0]).Year.ToString();
+                string date2 = day2 + "/" + month2 + "/" + year2;
+
                 string socio = "", libro = "";
 
                 OleDbCommand commandSocios = new OleDbCommand();
                 OleDbCommand commandNumLibro = new OleDbCommand();
 
                 //socio
-                commandSocios.Connection = dbConnection; 
-                commandSocios.CommandType = CommandType.TableDirect; 
-                commandSocios.CommandText = "SELECT * FROM SOCIOS"; 
+                commandSocios.Connection = dbConnection;
+                commandSocios.CommandType = CommandType.TableDirect;
+                commandSocios.CommandText = "SELECT * FROM SOCIOS";
                 OleDbDataReader readerSocios = commandSocios.ExecuteReader();
 
                 //num libro
@@ -78,6 +88,7 @@ namespace pryVonWorkWithDB2
                         socio = readerSocios["Nombre"].ToString();
                     }
                 }
+                readerSocios.Close();
 
                 //reading the num libro
                 while (readerNumLibro.Read())
@@ -87,8 +98,9 @@ namespace pryVonWorkWithDB2
                         libro = readerNumLibro["Título"].ToString();
                     }
                 }
+                readerNumLibro.Close();
 
-                grdLends.Rows.Add(readerPrestamos[0], readerPrestamos[1], socio, libro, readerPrestamos[4]);
+                grdLends.Rows.Add(date1, date2, socio, libro, readerPrestamos[4]);
             }
 
             readerPrestamos.Close();

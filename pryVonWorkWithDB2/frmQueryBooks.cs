@@ -11,6 +11,7 @@ using System.Data.OleDb;
 using System.Data.Common;
 using System.IO;
 using System.Net;
+using System.Security.AccessControl;
 
 namespace pryVonWorkWithDB2
 {
@@ -20,7 +21,33 @@ namespace pryVonWorkWithDB2
         public frmQueryBooks()
         {
             InitializeComponent();
-            frmMain.getDataFromDBQuery("BIBLIOTECA.accdb", "LIBROS", grdBOOKS);
+            //openning the data base!
+            OleDbConnection dbConnection = new OleDbConnection(frmMain.accessURL + "BIBLIOTECA.accdb");
+            dbConnection.Open();
+
+            //getting data from the db
+            OleDbCommand bringFromDB = new OleDbCommand();
+
+            bringFromDB.Connection = dbConnection; //connecting .net with the DB
+            bringFromDB.CommandType = CommandType.TableDirect; //getting the data from a table
+            bringFromDB.CommandText = "LIBROS"; ///name of the table
+
+            //data reading: reading only the data
+            OleDbDataReader reader = bringFromDB.ExecuteReader();
+
+            //we add the 
+            while (reader.Read())
+            {
+                //date
+                string day = Convert.ToDateTime(reader[2]).Day.ToString();
+                string month = Convert.ToDateTime(reader[2]).Month.ToString();
+                string year = Convert.ToDateTime(reader[2]).Year.ToString();
+                string date = day + "/" + month + "/" + year;
+
+                grdBOOKS.Rows.Add(reader[0], reader[1], date, reader[3]); 
+            }
+
+            dbConnection.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -50,6 +50,7 @@
             // 
             // grdLends
             // 
+            this.grdLends.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grdLends.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdLends.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFechaRetiro,

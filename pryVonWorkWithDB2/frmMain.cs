@@ -32,21 +32,29 @@ namespace pryVonWorkWithDB2
             bringFromDB.CommandText = tableName.ToUpper(); ///name of the table
 
             //data reading: reading only the data
-            OleDbDataReader lectorDeConsulta = bringFromDB.ExecuteReader();
+            OleDbDataReader reader = bringFromDB.ExecuteReader();
 
             //we add the 
-            while (lectorDeConsulta.Read())
+            while (reader.Read())
             {
+                //for(int i = 0; i < reader.FieldCount; i++)
+                //{
+                //    Type type = reader[i].GetType();
+                //    Console.WriteLine(type);
+                //    if (type.ToString() == "System.DateTime")
+                //    {
+                //    }
+                //}
                 switch (gridName.Columns.Count)
                 {
-                    case 1: gridName.Rows.Add(lectorDeConsulta[0]); break;
-                    case 2: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1]); break;
-                    case 3: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2]); break;
-                    case 4: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3]); break;
-                    case 5: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3], lectorDeConsulta[4]); break;
-                    case 6: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3], lectorDeConsulta[4], lectorDeConsulta[5]); break;
-                    case 7: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3], lectorDeConsulta[4], lectorDeConsulta[5], lectorDeConsulta[6]); break;
-                    case 8: gridName.Rows.Add(lectorDeConsulta[0], lectorDeConsulta[1], lectorDeConsulta[2], lectorDeConsulta[3], lectorDeConsulta[4], lectorDeConsulta[5], lectorDeConsulta[6], lectorDeConsulta[7]); break;
+                    case 1: gridName.Rows.Add(reader[0]); break;
+                    case 2: gridName.Rows.Add(reader[0], reader[1]); break;
+                    case 3: gridName.Rows.Add(reader[0], reader[1], reader[2]); break;
+                    case 4: gridName.Rows.Add(reader[0], reader[1], reader[2], reader[3]); break;
+                    case 5: gridName.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4]); break;
+                    case 6: gridName.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4], reader[5]); break;
+                    case 7: gridName.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]); break;
+                    case 8: gridName.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6], reader[7]); break;
                     default: MessageBox.Show("Invalid table, too much columns for this program!"); break;
                 }
             }

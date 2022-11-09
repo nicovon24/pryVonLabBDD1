@@ -49,6 +49,7 @@
             // 
             // grdBOOKS
             // 
+            this.grdBOOKS.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grdBOOKS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdBOOKS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTitulo,

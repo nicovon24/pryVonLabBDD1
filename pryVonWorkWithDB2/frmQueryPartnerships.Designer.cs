@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.grdPartners = new System.Windows.Forms.DataGridView();
-            this.btnBack = new System.Windows.Forms.Button();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNroLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdPartners)).BeginInit();
             this.SuspendLayout();
             // 
             // grdPartners
             // 
+            this.grdPartners.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grdPartners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdPartners.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre,
@@ -52,16 +53,6 @@
             this.grdPartners.Size = new System.Drawing.Size(539, 347);
             this.grdPartners.TabIndex = 4;
             this.grdPartners.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPartners_CellContentClick);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(448, 391);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(103, 37);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // colNombre
             // 
@@ -87,6 +78,16 @@
             // 
             this.colNSocio.HeaderText = "Nº SOCIO";
             this.colNSocio.Name = "colNSocio";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(448, 391);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(103, 37);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmQueryPartnerships
             // 
