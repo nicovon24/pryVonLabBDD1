@@ -58,7 +58,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(22, 200);
+            this.btnVolver.Location = new System.Drawing.Point(181, 199);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(63, 31);
             this.btnVolver.TabIndex = 71;
@@ -76,7 +76,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(179, 199);
+            this.btnActualizar.Location = new System.Drawing.Point(22, 198);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(65, 32);
             this.btnActualizar.TabIndex = 70;

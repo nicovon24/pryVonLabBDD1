@@ -78,7 +78,7 @@
             this.lblDateRes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDateRes.Location = new System.Drawing.Point(94, 104);
             this.lblDateRes.Name = "lblDateRes";
-            this.lblDateRes.Size = new System.Drawing.Size(140, 35);
+            this.lblDateRes.Size = new System.Drawing.Size(140, 39);
             this.lblDateRes.TabIndex = 6;
             // 
             // lblDate

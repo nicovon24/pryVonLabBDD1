@@ -56,7 +56,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(24, 141);
+            this.btnVolver.Location = new System.Drawing.Point(183, 137);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(63, 31);
             this.btnVolver.TabIndex = 66;
@@ -74,7 +74,7 @@
             // 
             // bntEliminar
             // 
-            this.bntEliminar.Location = new System.Drawing.Point(181, 140);
+            this.bntEliminar.Location = new System.Drawing.Point(24, 137);
             this.bntEliminar.Name = "bntEliminar";
             this.bntEliminar.Size = new System.Drawing.Size(65, 32);
             this.bntEliminar.TabIndex = 65;

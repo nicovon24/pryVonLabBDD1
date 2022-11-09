@@ -68,9 +68,14 @@ namespace pryVonWorkWithDB2
                     {
                         if (reader["Título"].ToString() == cbTitle.Text)
                         {
-
+                            //author
                             lblAuthorRes.Text = reader["Autor"].ToString();
-                            lblDateRes.Text = reader["Fecha Editado"].ToString();
+
+                            //date
+                            string day = Convert.ToDateTime(reader["Fecha Editado"]).Day.ToString();
+                            string month = Convert.ToDateTime(reader["Fecha Editado"]).Month.ToString();
+                            string year = Convert.ToDateTime(reader["Fecha Editado"]).Year.ToString();
+                            lblDateRes.Text = day + "/" + month + "/" + year;
                         }
                     }
                     reader.Close();
